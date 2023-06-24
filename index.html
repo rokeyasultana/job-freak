@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Left Panel Example</title>
+  <style>
+    /* Basic styling for demonstration purposes */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #left-panel {
+      float: left;
+      width: 200px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    #content {
+      margin-left: 220px;
+      padding: 20px;
+    }
+    /* Styling for the active link */
+    .active {
+      font-weight: bold;
+    }
+    .content-section {
+      display: none;
+    }
+    .content-section.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div id="left-panel">
+    <a href="#home" class="nav-link">Home</a><br>
+    <a href="#contact" class="nav-link">Contact</a><br>
+    <a href="#info" class="nav-link">Information</a><br>
+    <a href="#guide" class="nav-link">Guide</a><br>
+  </div>
+  <div id="content">
+    <div id="home" class="content-section active">
+      <h1>Welcome to the Home Page</h1>
+      <p>This is the content for the Home page.</p>
+    </div>
+    <div id="contact" class="content-section">
+      <h1>Contact Information</h1>
+      <p>This is the content for the Contact page.</p>
+    </div>
+    <div id="info" class="content-section">
+      <h1>Information</h1>
+      <p>This is the content for the Information page.</p>
+    </div>
+    <div id="guide" class="content-section">
+      <h1>Guide</h1>
+      <p>This is the content for the Guide page.</p>
+    </div>
+  </div>
+
+  <script>
+    // Handle click 
+    var links = document.getElementsByClassName('nav-link');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function(event) {
+        event.preventDefault();
+        var target = this.getAttribute('href').substring(1); 
+        showContent(target);
+      });
+    }
+
+    function showContent(contentId) {
+      // Hide all content sections
+      var contentSections = document.getElementsByClassName('content-section');
+      for (var i = 0; i < contentSections.length; i++) {
+        contentSections[i].classList.remove('active');
+      }
+
+      // Show the selected content section
+      var selectedContent = document.getElementById(contentId);
+      selectedContent.classList.add('active');
+
+      // Update the active link styling
+      for (var j = 0; j < links.length; j++) {
+        links[j].classList.remove('active');
+      }
+      document.querySelector('a[href="#' + contentId + '"]').classList.add('active');
+    }
+  </script>
+</body>
+</html>
