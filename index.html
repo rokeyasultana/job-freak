@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>Left Panel Example</title>
+
   <style>
     /* Basic styling for demonstration purposes */
     body {
       font-family: Arial, sans-serif;
+    
     }
-    #left-panel {
+   #left-panel {
       float: left;
       width: 200px;
-      background-color: #f2f2f2;
+      
       padding: 20px;
-    }
 
+    }
+    #left-panel .nav-link {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 10px 0;
+      border-bottom: 1px solid coral;
+    }
+    #left-panel .nav-link:hover {
+      background-color: #ddd;
+    }
+    #left-panel .nav-link.active {
+      font-weight: bold;
+      background-color: #eaeaea;
+    }
     #content {
-      margin-left: 220px;
+      margin-left: 250px;
       padding: 20px;
     }
     /* Styling for the active link */
-    .active {
-      font-weight: bold;
-    }
     .content-section {
       display: none;
     }
     .content-section.active {
       display: block;
+    }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+      #left-panel {
+        float: none;
+        width: 100%;
+      }
+      #content {
+        margin-left: 0;
+      }
     }
   </style>
 </head>
