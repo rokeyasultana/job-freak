@@ -1,59 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <title>Left Panel Example</title>
 
-  <style>
-    /* Basic styling for demonstration purposes */
-    body {
-      font-family: Arial, sans-serif;
-    
-    }
-   #left-panel {
-      float: left;
-      width: 200px;
-      
-      padding: 20px;
-
-    }
-    #left-panel .nav-link {
-      display: block;
-      color: #333;
-      text-decoration: none;
-      padding: 10px 0;
-      border-bottom: 1px solid coral;
-    }
-    #left-panel .nav-link:hover {
-      background-color: #ddd;
-    }
-    #left-panel .nav-link.active {
-      font-weight: bold;
-      background-color: #eaeaea;
-    }
-    #content {
-      margin-left: 250px;
-      padding: 20px;
-    }
-    /* Styling for the active link */
-    .content-section {
-      display: none;
-    }
-    .content-section.active {
-      display: block;
-    }
-
-      /* Responsive styles */
-      @media (max-width: 768px) {
-      #left-panel {
-        float: none;
-        width: 100%;
-      }
-      #content {
-        margin-left: 0;
-      }
-    }
-  </style>
 </head>
 <body>
   <div id="left-panel">
@@ -62,22 +16,94 @@
     <a href="#info" class="nav-link">Information</a><br>
     <a href="#guide" class="nav-link">Guide</a><br>
   </div>
+
+  <!-- Home  -->
   <div id="content">
     <div id="home" class="content-section active">
-      <h1>Welcome to the Home Page</h1>
-      <p>This is the content for the Home page.</p>
+      <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Website</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </header>
+
     </div>
+
+<!-- contact us -->
     <div id="contact" class="content-section">
-      <h1>Contact Information</h1>
-      <p>This is the content for the Contact page.</p>
+      <div class="contact-container">
+        <div class="contact-info">
+            <i class="fas fa-envelope"></i>
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, please feel free to reach out to us.</p>
+        </div>
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
     </div>
+    </div>
+
+<!-- Information -->
     <div id="info" class="content-section">
-      <h1>Information</h1>
-      <p>This is the content for the Information page.</p>
+      <div class="info-container">
+        <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Location</h3>
+            <p>123 Main Street, City, Country</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <h3>Contact</h3>
+            <p>Phone: +1 123 456 7890</p>
+            <p>Email: info@example.com</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <h3>Opening Hours</h3>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+            <p>Saturday: 10:00 AM - 4:00 PM</p>
+        </div>
+        <div class="info-item">
+            <i class="fas fa-users"></i>
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum faucibus tempus efficitur. Donec semper, ipsum a efficitur ultrices, nunc nisi convallis ligula, ac pulvinar arcu risus id velit.</p>
+        </div>
     </div>
+    </div>
+
+    <!-- Guide -->
     <div id="guide" class="content-section">
       <h1>Guide</h1>
-      <p>This is the content for the Guide page.</p>
+      <div class="guide-container">
+        <div class="guide-item">
+            <i class="fas fa-book"></i>
+            <h3>Step 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum faucibus tempus efficitur. Donec semper, ipsum a efficitur ultrices, nunc nisi convallis ligula, ac pulvinar arcu risus id velit.</p>
+        </div>
+        <div class="guide-item">
+            <i class="fas fa-tools"></i>
+            <h3>Step 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum faucibus tempus efficitur. Donec semper, ipsum a efficitur ultrices, nunc nisi convallis ligula, ac pulvinar arcu risus id velit.</p>
+        </div>
+        <div class="guide-item">
+            <i class="fas fa-check-circle"></i>
+            <h3>Step 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum faucibus tempus efficitur. Donec semper, ipsum a efficitur ultrices, nunc nisi convallis ligula, ac pulvinar arcu risus id velit.</p>
+        </div>
+        <div class="guide-item">
+            <i class="fas fa-paper-plane"></i>
+            <h3>Step 4</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum faucibus tempus efficitur. Donec semper, ipsum a efficitur ultrices, nunc nisi convallis ligula, ac pulvinar arcu risus id velit.</p>
+        </div>
+    </div>
+   
     </div>
   </div>
 
